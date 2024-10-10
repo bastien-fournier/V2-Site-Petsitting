@@ -3,7 +3,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#E5E5E5", // Définir une couleur primaire personnalisée
+        background: "#C2EFD4", // Définir une couleur primaire personnalisée
         secondary: "#FDC435",
       },
       fontFamily: {
