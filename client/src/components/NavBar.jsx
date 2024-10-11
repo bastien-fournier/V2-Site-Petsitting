@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,8 +21,9 @@ export default function HomePage() {
               <li className="hover:text-gray-800 cursor-pointer">
                 Se Connecter
               </li>
+
               <li className="hover:text-gray-800 cursor-pointer">
-                Inscription
+                <Link to="/sign-up-page">Inscription</Link>
               </li>
             </ul>
           </div>
@@ -60,7 +62,7 @@ export default function HomePage() {
                 Se Connecter
               </li>
               <li className="hover:text-gray-800 cursor-pointer">
-                Inscription
+                <Link to="/sign-up-page">Inscription</Link>
               </li>
             </ul>
           </div>
