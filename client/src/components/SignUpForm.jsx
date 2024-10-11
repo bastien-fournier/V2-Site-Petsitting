@@ -1,6 +1,6 @@
 export default function SignUpForm() {
   return (
-    <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-md shadow-md">
+    <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-md shadow-md mt-20 mb-20">
       <h1 className="text-2xl font-bold text-center text-gray-800">
         Inscription
       </h1>

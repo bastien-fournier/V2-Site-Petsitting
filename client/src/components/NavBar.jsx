@@ -13,7 +13,9 @@ export default function HomePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div>
-            <p className="font-playfair font-bold text-2xl ">NaosGuard</p>
+            <p className="font-playfair font-bold text-2xl ">
+              <Link to="/">NaosGuard</Link>
+            </p>
           </div>
 
           <div className="hidden md:flex space-x-8">
