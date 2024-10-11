@@ -1,11 +1,11 @@
 export default function Welcome() {
   return (
-    <div className="mb-5 p-5 bg-white rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
-      <h1 className="font-playfair font-bold text-5xl mt-5 text-gray-800">
-        Dog and Cats lover 🐶 😺
+    <div className="mb-5 p-5 ">
+      <h1 className="font-playfair font-bold text-5xl mt-5 ">
+        Dogs and Cats lover
       </h1>
-      <h2 className="text-2xl mt-5 text-gray-600">Bastien PetSitter</h2>
-      <p className="mt-3 text-gray-500">
+      <h2 className="text-2xl mt-5 ">Bastien Pet-Sitter</h2>
+      <p className="mt-3 ">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
         reiciendis temporibus, ipsam nostrum nesciunt voluptates eos dicta
         necessitatibus dolorem a optio sunt corrupti cumque rem corporis,

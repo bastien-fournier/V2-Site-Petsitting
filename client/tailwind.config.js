@@ -6,6 +6,7 @@ export default {
         background: "#C2EFD4", // Définir une couleur primaire personnalisée
         secondary: "#C2EFD4",
         third: "#224F34",
+        forth: "#6BC785",
       },
       fontFamily: {
         nunito: ['"Nunito-Regular.ttf"', "sans-serif"], // Définir une police de caractères personnalisée
