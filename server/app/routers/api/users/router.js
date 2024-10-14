@@ -8,8 +8,9 @@ const router = express.Router();
 
 // Import item-related actions
 const { add } = require("../../../controllers/UserActions");
+const { hashPassword } = require("../../../services/auth");
 
-router.post("/registers", add);
+router.post("/registers", hashPassword, add);
 // router.delete("/delete-user", verifyCookie, destroyUser);
 /* ************************************************************************* */
 

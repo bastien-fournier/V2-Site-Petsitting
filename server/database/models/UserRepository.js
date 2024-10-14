@@ -13,7 +13,7 @@ class UserRepository extends AbstractRepository {
     // Execute the SQL INSERT query to add a new item to the "item" table
     const [result] = await this.database.query(
       `insert into ${this.table} (lastname, firstname, email, password) values (?, ?, ?, ?)`,
-      [user.lastname, user.firstname, user.email, user.password]
+      [user.lastname, user.firstname, user.email, user.hashedPassword]
     );
 
     // Return the ID of the newly inserted item
