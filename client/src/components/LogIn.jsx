@@ -37,7 +37,7 @@ export default function LogIn() {
       if (response.status === 200) {
         const user = await response.json();
         login(user.user);
-        navigate("/");
+        navigate("/profil-page");
         alert(`Bienvenue ${user.user.firstname}`);
       } else {
         const errorText = await response.text();

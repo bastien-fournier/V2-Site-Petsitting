@@ -7,6 +7,8 @@ import App from "./App";
 import HomePage from "./pages/HomePage";
 import SignUpForm from "./components/SignUpForm";
 import LogInPage from "./pages/LoginPage";
+import ProfilPage from "./pages/ProfilPage";
+import AnimalPage from "./pages/AnimalPage";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,16 @@ const router = createBrowserRouter([
         path: "/log-in-page",
         id: "logInPage",
         element: <LogInPage />,
+      },
+      {
+        path: "/profil-page",
+        id: "profilPage",
+        element: <ProfilPage />,
+      },
+      {
+        path: "/animal-page",
+        id: "animalPage",
+        element: <AnimalPage />,
       },
     ],
   },
