@@ -66,7 +66,7 @@ export default function SignUpForm() {
 
       const data = await response.json();
       console.info("Success:", data);
-      navigate("/"); // Redirection après succès
+      navigate("/log-in-page"); // Redirection après succès
     } catch (err) {
       console.error("Fetch error:", err);
     }

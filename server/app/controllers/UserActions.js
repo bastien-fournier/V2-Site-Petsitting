@@ -15,6 +15,20 @@ const add = async (req, res, next) => {
   }
 };
 
+const browse = async (req, res, next) => {
+  try {
+    // Fetch all offers from the database
+    const users = await tables.user.readAll();
+
+    // Respond with the offers in JSON format
+    res.json(users);
+  } catch (err) {
+    // Pass any errors to the error-handling middleware
+    next(err);
+  }
+};
+
 module.exports = {
   add,
+  browse,
 };
