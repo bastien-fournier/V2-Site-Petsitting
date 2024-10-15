@@ -21,7 +21,7 @@ export default function HomePage() {
           <div className="hidden md:flex space-x-8">
             <ul className="flex space-x-5 text-gray-600">
               <li className="hover:text-gray-800 cursor-pointer">
-                Se Connecter
+                <Link to="/log-in-page">Se connecter</Link>
               </li>
 
               <li className="hover:text-gray-800 cursor-pointer">
