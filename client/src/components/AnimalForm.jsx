@@ -81,7 +81,7 @@ export default function AnimalForm() {
           />
         </div>
 
-        <div className="mt-4">
+        {/* <div className="mt-4">
           <label
             htmlFor="dogAge"
             className="block text-sm font-medium text-gray-700"
@@ -127,7 +127,7 @@ export default function AnimalForm() {
             required
             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500"
           />
-        </div>
+        </div> */}
 
         <div className="mt-6">
           <button
