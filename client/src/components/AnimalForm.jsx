@@ -1,4 +1,64 @@
-export default function AnimalForme() {
+// import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+
+// const ApiUrl = import.meta.env.VITE_API_URL;
+
+export default function AnimalForm() {
+  //   const navigate = useNavigate();
+
+  //   const [pet, setPet] = useState({
+  //     petName: "",
+  //   });
+
+  //   const [errors, setErrors] = useState({});
+
+  //   const handleChange = (e) => {
+  //     const { name, value } = e.target;
+  //     setPet({
+  //       ...pet,
+  //       [name]: value,
+  //     });
+  //     setErrors({ ...errors, [name]: "" });
+  //   };
+
+  //   const validateFormPet = () => {
+  //     const newErrors = {};
+  //     if (pet.petName === "") newErrors.petName = "Le prénom est requis.";
+
+  //     setErrors(newErrors);
+
+  //     return Object.keys(newErrors).length === 0; // Retourne true si pas d'erreurs
+  //   };
+
+  //   const handleSubmit = async (e) => {
+  //     e.preventDefault();
+
+  //     // Appeler la fonction de validation
+  //     if (!validateFormPet()) {
+  //       return; // Arrêter la soumission si le formulaire n'est pas valide
+  //     }
+
+  //     try {
+  //       const response = await fetch(`${ApiUrl}/api/pets/petRegisters`, {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify(pet),
+  //       });
+
+  //       if (!response.ok) {
+  //         throw new Error("Erreur lors de l'inscription");
+  //       }
+
+  //       const data = await response.json();
+  //       console.info("Success:", data);
+  //       navigate("/profil-page"); // Redirection après succès
+  //     } catch (err) {
+  //       console.error("Fetch error:", err);
+  //     }
+  //   };
+
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md mt-20 mb-20">
       <h1 className="text-2xl font-bold text-center text-gray-800">
