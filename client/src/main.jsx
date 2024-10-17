@@ -9,6 +9,8 @@ import SignUpForm from "./components/SignUpForm";
 import LogInPage from "./pages/LoginPage";
 import ProfilPage from "./pages/ProfilPage";
 import AnimalPage from "./pages/AnimalPage";
+import AboutServices from "./pages/AboutServices";
+import BookingPage from "./pages/BookingPage";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,16 @@ const router = createBrowserRouter([
         path: "/animal-page",
         id: "animalPage",
         element: <AnimalPage />,
+      },
+      {
+        path: "/about-services",
+        id: "aboutServices",
+        element: <AboutServices />,
+      },
+      {
+        path: "/booking-page",
+        id: "bookingPage",
+        element: <BookingPage />,
       },
     ],
   },

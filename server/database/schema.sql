@@ -9,9 +9,9 @@ create table user (
 create table pet (
   id int unsigned primary key auto_increment not null,
   petName varchar(255) not null,
-  -- petAge int not null,
-  -- petBreed varchar(255),
-  -- description text,
+  petAge int not null,
+  petBreed varchar(255),
+  description text,
   user_id int unsigned not null,
   foreign key (user_id) references `user`(id) on delete cascade
 );

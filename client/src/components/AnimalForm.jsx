@@ -8,23 +8,29 @@ export default function AnimalForm() {
 
   const [pet, setPet] = useState({
     petName: "",
+    petAge: "",
+    petBreed: "",
+    description: "",
   });
 
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
+
     setPet({
       ...pet,
-      petName: e.target.value,
+      [name]: value, // Utilise le nom du champ pour mettre à jour la bonne propriété
     });
-    setErrors({ ...errors, petName: "" });
+
+    setErrors({ ...errors, [name]: "" }); // Efface les erreurs liées au champ en cours de modification
   };
 
   const validateFormPet = () => {
     const newErrors = {};
     if (pet.petName === "") newErrors.petName = "Le prénom est requis.";
 
-    // setErrors(newErrors);
+    setErrors(newErrors);
 
     return Object.keys(newErrors).length === 0; // Retourne true si pas d'erreurs
   };
@@ -70,7 +76,7 @@ export default function AnimalForm() {
             htmlFor="petName"
             className="block text-sm font-medium text-gray-700"
           >
-            Prénom du chien
+            Prénom de l'animal
           </label>
           <input
             type="text"
@@ -83,33 +89,38 @@ export default function AnimalForm() {
           />
         </div>
 
-        {/* <div className="mt-4">
+        <div className="mt-4">
           <label
-            htmlFor="dogAge"
+            htmlFor="petAge"
             className="block text-sm font-medium text-gray-700"
           >
-            Âge du chien (en années)
+            Âge de l'animal
           </label>
           <input
             type="number"
-            id="dogAge"
-            name="dogAge"
+            id="petAge"
+            name="petAge"
+            onChange={handleChange}
+            value={pet.petAge}
             required
+            min="0"
             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500"
           />
         </div>
 
         <div className="mt-4">
           <label
-            htmlFor="dogBreed"
+            htmlFor="petBreed"
             className="block text-sm font-medium text-gray-700"
           >
-            Race du chien
+            Espèce
           </label>
           <input
             type="text"
-            id="dogBreed"
-            name="dogBreed"
+            id="petBreed"
+            name="petBreed"
+            onChange={handleChange}
+            value={pet.petBreed}
             required
             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500"
           />
@@ -117,19 +128,21 @@ export default function AnimalForm() {
 
         <div className="mt-4">
           <label
-            htmlFor="dogDescription"
+            htmlFor="description"
             className="block text-sm font-medium text-gray-700"
           >
             Description
           </label>
           <textarea
-            id="dogDescription"
-            name="dogDescription"
+            id="description"
+            name="description"
             rows="3"
+            onChange={handleChange}
+            value={pet.description}
             required
             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500"
           />
-        </div> */}
+        </div>
 
         <div className="mt-6">
           <button

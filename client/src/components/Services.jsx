@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Services() {
   return (
     <section className="pt-16 pb-10">
@@ -13,12 +15,14 @@ export default function Services() {
           /> */}
           <h3 className="text-xl font-semibold">Garde de chiens</h3>
           <p>Je m'occupe de vos chiens à domicile ou chez vous avec amour.</p>
-          <button
-            type="button"
-            className="mt-3 bg-forth text-white px-4 py-2 rounded"
-          >
-            En savoir plus
-          </button>
+          <Link to="/about-services">
+            <button
+              type="button"
+              className="mt-3 bg-forth text-white px-4 py-2 rounded"
+            >
+              En savoir plus
+            </button>
+          </Link>
         </div>
         <div className=" bg-white p-5 shadow-lg rounded-lg">
           {/* <img
@@ -31,12 +35,14 @@ export default function Services() {
             Je veille sur vos chats et leur offre toute l'attention dont ils ont
             besoin.
           </p>
-          <button
-            type="button"
-            className="mt-3 bg-forth text-white px-4 py-2 rounded"
-          >
-            En savoir plus
-          </button>
+          <Link to="/about-services">
+            <button
+              type="button"
+              className="mt-3 bg-forth text-white px-4 py-2 rounded"
+            >
+              En savoir plus
+            </button>
+          </Link>
         </div>
         <div className=" bg-white p-5 shadow-lg rounded-lg">
           {/* <img
@@ -51,12 +57,14 @@ export default function Services() {
             se dépenser, de découvrir de nouveaux endroits et de socialiser avec
             d'autres animaux.
           </p>
-          <button
-            type="button"
-            className="mt-3 bg-forth text-white px-4 py-2 rounded"
-          >
-            En savoir plus
-          </button>
+          <Link to="/about-services">
+            <button
+              type="button"
+              className="mt-3 bg-forth text-white px-4 py-2 rounded"
+            >
+              En savoir plus
+            </button>
+          </Link>
         </div>
       </div>
     </section>

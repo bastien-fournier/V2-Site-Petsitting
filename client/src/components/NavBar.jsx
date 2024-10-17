@@ -23,11 +23,11 @@ export default function HomePage() {
           <div className="hidden md:flex space-x-8">
             <ul className="flex space-x-5 text-gray-600">
               <li className="hover:text-gray-800 cursor-pointer">
-                <Link to="/log-in-page">Se connecter</Link>
+                <Link to="/sign-up-page">S'inscrire</Link>
               </li>
 
               <li className="hover:text-gray-800 cursor-pointer">
-                <Link to="/sign-up-page">Inscription</Link>
+                <Link to="/log-in-page">Se connecter</Link>
               </li>
             </ul>
           </div>
@@ -36,7 +36,7 @@ export default function HomePage() {
             <button
               type="button"
               onClick={toggleMenu}
-              aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"} // Ajout d'un aria-label pour l'accessibilité
+              aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
               className="focus:outline-none"
             >
               <svg
@@ -63,10 +63,10 @@ export default function HomePage() {
           <div className="md:hidden">
             <ul className="flex flex-col space-y-4 py-4 text-gray-600">
               <li className="hover:text-gray-800 cursor-pointer">
-                Se Connecter
+                <Link to="/sign-up-page">S'inscire</Link>
               </li>
               <li className="hover:text-gray-800 cursor-pointer">
-                <Link to="/sign-up-page">Inscription</Link>
+                <Link to="/log-in-page">Se connecter</Link>
               </li>
             </ul>
           </div>
