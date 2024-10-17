@@ -13,7 +13,7 @@ export default function Profil() {
         <img
           src={Dog}
           alt="Profil"
-          className="w-80 h-52 md:w-48 md:h-48 lg:w-56 lg:h-56  mx-auto mb-4 object-cover"
+          className="w-80 h-52 md:w-80 md:h-52 lg:w-80 lg:h-52  mx-auto mb-4 object-cover"
         />
         <h2 className="text-2xl font-bold text-gray-800">
           Bienvenue, {user.firstname} !
@@ -26,7 +26,7 @@ export default function Profil() {
           to="/animal-page"
           className="bg-forth text-white px-4 py-2 rounded hover:bg-forth-dark transition duration-300"
         >
-          Ajouter les informations de mon animal
+          Ajouter un nouvel animal
         </Link>
       </div>
     </div>

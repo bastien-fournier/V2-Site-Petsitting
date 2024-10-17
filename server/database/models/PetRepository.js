@@ -12,8 +12,8 @@ class PetRepository extends AbstractRepository {
   async create(pet, userId) {
     // Execute the SQL INSERT query to add a new item to the "item" table
     const [result] = await this.database.query(
-      `insert into ${this.table} (petName, user_id) values (?, ?)`,
-      [pet.petName, userId]
+      `insert into ${this.table} (petName, petAge, petBreed, description, user_id) values (?, ?, ?, ?, ?)`,
+      [pet.petName, pet.petAge, pet.petBreed, pet.description, userId]
     );
 
     // Return the ID of the newly inserted item
