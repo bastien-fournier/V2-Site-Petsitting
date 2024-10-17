@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Welcome() {
   return (
     <div className="mb-5 p-5 ">
@@ -11,12 +13,14 @@ export default function Welcome() {
         necessitatibus dolorem a optio sunt corrupti cumque rem corporis,
         itaque, quos atque accusamus.
       </p>
-      <button
-        type="button"
-        className="bg-third text-white px-4 py-2 rounded mt-5 transition-transform duration-300 hover:scale-105"
-      >
-        Me faire une demande
-      </button>
+      <Link to="/booking-page">
+        <button
+          type="button"
+          className="bg-third text-white px-4 py-2 rounded mt-5 transition-transform duration-300 hover:scale-105"
+        >
+          Me faire une demande
+        </button>
+      </Link>
     </div>
   );
 }

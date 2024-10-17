@@ -76,7 +76,7 @@ export default function AnimalForm() {
             htmlFor="petName"
             className="block text-sm font-medium text-gray-700"
           >
-            Prénom du chien
+            Prénom de l'animal
           </label>
           <input
             type="text"
@@ -113,7 +113,7 @@ export default function AnimalForm() {
             htmlFor="petBreed"
             className="block text-sm font-medium text-gray-700"
           >
-            Race du chien
+            Espèce
           </label>
           <input
             type="text"
