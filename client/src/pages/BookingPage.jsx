@@ -1,5 +1,9 @@
 import Booking from "../components/Booking";
 
 export default function BookingPage() {
-  return <Booking />;
+  return (
+    <div className="flex justify-center">
+      <Booking />
+    </div>
+  );
 }
