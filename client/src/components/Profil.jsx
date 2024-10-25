@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useUserContext } from "./Context/UserContext";
 
-// import Avatar from "../assets/images/profil.png";
 import Dog from "../assets/images/dog.png";
+import PetProfil from "./PetProfil";
 
 export default function Profil() {
   const { user } = useUserContext();
@@ -28,6 +28,9 @@ export default function Profil() {
         >
           Ajouter un nouvel animal
         </Link>
+      </div>
+      <div>
+        <PetProfil />
       </div>
     </div>
   );
