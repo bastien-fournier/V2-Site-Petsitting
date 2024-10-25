@@ -4,8 +4,9 @@ export default function Services() {
   return (
     <section className="pt-16 pb-10">
       <h2 className="text-3xl font-playfair font-bold text-center">
-        Mes Services
+        <span className="text-third">Mes</span> Services
       </h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
         <div className=" bg-white p-5 shadow-lg rounded-lg">
           {/* <img

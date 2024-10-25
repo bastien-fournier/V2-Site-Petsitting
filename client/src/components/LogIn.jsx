@@ -51,15 +51,13 @@ export default function LogIn() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md mt-10 mb-20">
-      <h1 className="text-2xl font-bold text-center text-gray-800">
-        Connexion
-      </h1>
+    <div className="max-w-md mx-auto p-6 bg-secondary rounded-lg shadow-md mt-10 mb-20">
+      <h1 className="text-2xl font-bold text-center text-white">Connexion</h1>
       <form method="POST" onSubmit={handleSubmit}>
         <div className="mt-4">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-white"
           >
             Adresse mail
           </label>
@@ -88,7 +86,7 @@ export default function LogIn() {
         <div className="mt-4">
           <label
             htmlFor="password"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-white"
           >
             Mot de passe
           </label>
@@ -113,7 +111,7 @@ export default function LogIn() {
           )}
           <button
             type="submit"
-            className="w-full bg-third text-white font-bold py-2 rounded-md"
+            className="w-full bg-forth text-secondary font-bold py-2 rounded-md"
           >
             Se connecter
           </button>

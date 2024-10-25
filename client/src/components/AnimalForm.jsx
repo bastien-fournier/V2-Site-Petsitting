@@ -66,15 +66,15 @@ export default function AnimalForm() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md mt-20 mb-20">
-      <h1 className="text-2xl font-bold text-center text-gray-800">
+    <div className="max-w-md mx-auto p-6 bg-secondary rounded-lg shadow-md mt-20 mb-20">
+      <h1 className="text-2xl font-bold text-center text-white">
         Informations sur mon animal
       </h1>
       <form method="POST" onSubmit={handleSubmit}>
         <div className="mt-4">
           <label
             htmlFor="petName"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-white"
           >
             Prénom de l'animal
           </label>
@@ -92,7 +92,7 @@ export default function AnimalForm() {
         <div className="mt-4">
           <label
             htmlFor="petAge"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-white"
           >
             Âge de l'animal
           </label>
@@ -111,7 +111,7 @@ export default function AnimalForm() {
         <div className="mt-4">
           <label
             htmlFor="petBreed"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-white"
           >
             Espèce
           </label>
@@ -129,7 +129,7 @@ export default function AnimalForm() {
         <div className="mt-4">
           <label
             htmlFor="description"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-white"
           >
             Description
           </label>
@@ -147,7 +147,7 @@ export default function AnimalForm() {
         <div className="mt-6">
           <button
             type="submit"
-            className="w-full bg-third text-white font-bold py-2 rounded-md"
+            className="w-full bg-forth text-secondary font-bold py-2 rounded-md"
           >
             Enregistrer les informations
           </button>
