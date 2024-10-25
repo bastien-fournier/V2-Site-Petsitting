@@ -11,12 +11,14 @@ export default function HomePage() {
   };
 
   return user === null || user === "null" ? (
-    <nav className="bg-white shadow-md z-10">
+    <nav className="bg-white shadow-md z-10 rounded-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div>
-            <p className="font-playfair font-bold text-2xl ">
-              <Link to="/">NaosGuard</Link>
+            <p className="font-playfair font-bold text-2xl">
+              <Link to="/">
+                <span className="text-third">Naos</span>Guard
+              </Link>
             </p>
           </div>
 
@@ -74,12 +76,14 @@ export default function HomePage() {
       </div>
     </nav>
   ) : (
-    <nav className="bg-white shadow-md z-10">
+    <nav className="bg-white shadow-md z-10 rounded-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div>
-            <p className="font-playfair font-bold text-2xl ">
-              <Link to="/">NaosGuard</Link>
+            <p className="font-playfair font-bold text-2xl">
+              <Link to="/">
+                <span className="text-third">Naos</span>Guard
+              </Link>
             </p>
           </div>
 

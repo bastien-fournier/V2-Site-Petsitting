@@ -4,7 +4,7 @@ import DogWalk from "../components/DogWalk";
 
 export default function AboutServices() {
   return (
-    <div className="mt-10 flex flex-col gap-6 mb-10">
+    <div className="mt-20 flex flex-col gap-20 mb-20">
       <DogSitting />
       <CatSitting />
       <DogWalk />

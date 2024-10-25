@@ -3,10 +3,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#C2EFD4", // Définir une couleur primaire personnalisée
-        secondary: "#C2EFD4",
-        third: "#224F34",
-        forth: "#6BC785",
+        background: "#e5eae1", // Définir une couleur primaire personnalisée
+        secondary: "#003925",
+        third: "#f28ad4",
+        forth: "#fcf580",
       },
       fontFamily: {
         nunito: ['"Nunito-Regular.ttf"', "sans-serif"], // Définir une police de caractères personnalisée

@@ -4,10 +4,11 @@ export default function Services() {
   return (
     <section className="pt-16 pb-10">
       <h2 className="text-3xl font-playfair font-bold text-center">
-        Mes Services
+        <span className="text-third">Mes</span> Services
       </h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
-        <div className=" bg-white p-5 shadow-lg rounded-lg">
+        <div className=" bg-secondary p-5 shadow-lg rounded-lg text-white">
           {/* <img
             src="path/to/dog-sitting.jpg"
             alt="Garde de chiens"
@@ -18,13 +19,13 @@ export default function Services() {
           <Link to="/about-services">
             <button
               type="button"
-              className="mt-3 bg-forth text-white px-4 py-2 rounded"
+              className="mt-3 bg-forth text-secondary px-4 py-2 rounded"
             >
               En savoir plus
             </button>
           </Link>
         </div>
-        <div className=" bg-white p-5 shadow-lg rounded-lg">
+        <div className=" bg-secondary text-white p-5 shadow-lg rounded-lg">
           {/* <img
             src="path/to/cat-sitting.jpg"
             alt="Garde de chats"
@@ -38,13 +39,13 @@ export default function Services() {
           <Link to="/about-services">
             <button
               type="button"
-              className="mt-3 bg-forth text-white px-4 py-2 rounded"
+              className="mt-3 bg-forth text-secondary px-4 py-2 rounded"
             >
               En savoir plus
             </button>
           </Link>
         </div>
-        <div className=" bg-white p-5 shadow-lg rounded-lg">
+        <div className=" bg-secondary text-white p-5 shadow-lg rounded-lg">
           {/* <img
             src="path/to/cat-sitting.jpg"
             alt="Garde de chats"
@@ -60,7 +61,7 @@ export default function Services() {
           <Link to="/about-services">
             <button
               type="button"
-              className="mt-3 bg-forth text-white px-4 py-2 rounded"
+              className="mt-3 bg-forth text-secondary px-4 py-2 rounded"
             >
               En savoir plus
             </button>
