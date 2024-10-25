@@ -3,18 +3,20 @@ import Cat from "../assets/images/cat.jpg";
 
 export default function CatSitting() {
   return (
-    <div className="flex flex-col md:flex-row items-stretch bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="flex flex-col md:flex-row items-stretch bg-secondary shadow-lg rounded-lg overflow-hidden">
       <img
         src={Cat}
         alt="Cat sitting on Sofa"
         className="w-full md:w-1/2 h-auto md:h-full object-cover"
       />
       <div className="p-6 md:w-1/2">
-        <h2 className="text-2xl font-bold mb-2">Catsitting à domicile</h2>
-        <h4 className="text-lg text-gray-600 mb-4">
+        <h2 className="text-2xl font-bold text-white mb-2">
+          Catsitting à domicile
+        </h2>
+        <h4 className="text-lg text-white mb-4">
           Un séjour confortable pour votre chat, en toute sérénité
         </h4>
-        <p className="text-gray-700">
+        <p className="text-white">
           Pendant votre absence, offrez à votre chat un environnement calme et
           sécurisé, où il pourra rester dans le confort de son propre domicile.
           Nous assurons des visites régulières pour répondre à ses besoins :
@@ -26,7 +28,7 @@ export default function CatSitting() {
         <Link to="/booking-page">
           <button
             type="button"
-            className="mt-3 bg-forth text-white px-4 py-2 rounded"
+            className="mt-3 bg-forth text-secondary px-4 py-2 rounded"
           >
             Réserver
           </button>

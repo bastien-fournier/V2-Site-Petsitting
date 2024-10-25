@@ -3,20 +3,20 @@ import DogWalking from "../assets/images/dogWalk.jpg";
 
 export default function DogWalk() {
   return (
-    <div className="flex flex-col md:flex-row items-stretch bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="flex flex-col md:flex-row items-stretch bg-secondary shadow-lg rounded-lg overflow-hidden">
       <img
         src={DogWalking}
         alt="Cat sitting on Sofa"
         className="w-full md:w-1/2 h-auto md:h-full object-cover"
       />
       <div className="p-6 md:w-1/2">
-        <h2 className="text-2xl font-bold mb-2">
+        <h2 className="text-2xl font-bold text-white mb-2">
           Promenade de chiens à domicile
         </h2>
-        <h4 className="text-lg text-gray-600 mb-4">
+        <h4 className="text-lg text-white mb-4">
           Des sorties régulières pour le bien-être de votre chien
         </h4>
-        <p className="text-gray-700">
+        <p className="text-white">
           Pendant votre absence, nous nous occupons de promener votre chien et
           de lui offrir des moments de détente et de jeu en extérieur. Nous
           venons directement à votre domicile, emmenons votre chien pour une
@@ -29,7 +29,7 @@ export default function DogWalk() {
         <Link to="/booking-page">
           <button
             type="button"
-            className="mt-3 bg-forth text-white px-4 py-2 rounded"
+            className="mt-3 bg-forth text-secondary px-4 py-2 rounded"
           >
             Réserver
           </button>
