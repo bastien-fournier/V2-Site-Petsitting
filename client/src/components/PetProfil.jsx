@@ -10,20 +10,18 @@ export default function PetProfil() {
           className="w-24 h-24 rounded-full object-cover"
         />
       </div>
-      <h2 className="text-xl font-semibold text-gray-800 text-center mb-4">
-        Nom
-      </h2>
+      <h2 className="text-xl font-semibold text-white text-center mb-4">Nom</h2>
 
       <ul className="space-y-2">
-        <li className="text-sm text-gray-600">
-          <span className="font-medium text-gray-800">Âge :</span> Age ans
+        <li className="text-sm text-white">
+          <span className="font-medium text-white">Âge :</span> Age ans
         </li>
-        <li className="text-sm text-gray-600">
-          <span className="font-medium text-gray-800">Race :</span>
+        <li className="text-sm text-white">
+          <span className="font-medium text-white">Race :</span>
           Espèces
         </li>
-        <li className="text-sm text-gray-600">
-          <span className="font-medium text-gray-800">Description :</span>
+        <li className="text-sm text-white">
+          <span className="font-medium text-white">Description :</span>
           Description
         </li>
       </ul>
