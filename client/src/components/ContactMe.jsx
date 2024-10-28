@@ -4,6 +4,19 @@ import emailjs from "emailjs-com";
 export default function ContactMe() {
   const [isSent, setIsSent] = useState(false);
 
+  const [reservation, setReservation] = useState({
+    start_date: "",
+    end_date: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setReservation({
+      ...reservation,
+      [name]: value,
+    });
+  };
+
   const sendReservationRequest = (e) => {
     e.preventDefault();
 
@@ -29,7 +42,7 @@ export default function ContactMe() {
     <div className="max-w-md mx-auto p-6 bg-secondary rounded-lg shadow-md mt-10 mb-20">
       {isSent ? (
         <p className="text-green-600 font-semibold text-center">
-          Merci pour votre demande ! Je reviendrais très vite.
+          Merci pour votre demande ! Je reviendrais très vite vers vous.
         </p>
       ) : (
         <form onSubmit={sendReservationRequest}>
@@ -71,16 +84,34 @@ export default function ContactMe() {
 
           <div className="mt-4">
             <label
-              htmlFor="reservation_date"
+              htmlFor="start_date"
               className="block text-sm font-medium text-white"
             >
-              Date souhaitée
+              Date de début
             </label>
             <input
-              type="text"
-              id="reservation_date"
-              name="reservation_date"
+              type="date"
+              id="start_date"
+              name="start_date"
               required
+              onChange={handleChange} // Assure-toi d'avoir une fonction handleChange pour gérer l'état
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500"
+            />
+          </div>
+
+          <div className="mt-4">
+            <label
+              htmlFor="end_date"
+              className="block text-sm font-medium text-white"
+            >
+              Date de fin
+            </label>
+            <input
+              type="date"
+              id="end_date"
+              name="end_date"
+              required
+              onChange={handleChange} // Idem pour la fonction handleChange
               className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500"
             />
           </div>
