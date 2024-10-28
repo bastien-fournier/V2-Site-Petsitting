@@ -28,7 +28,7 @@ export function UserProvider({ children }) {
 
       if (response.status === 200) {
         setUser(null);
-        navigate(sessionExpired === true ? "/" : "/login-page");
+        navigate(sessionExpired === true ? "/" : "/log-in-page");
         if (sessionExpired === true) {
           notifyFail("Votre session a expiré. Veuillez vous reconnecter.");
         }
