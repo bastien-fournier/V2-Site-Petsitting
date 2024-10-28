@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Peach from "../assets/images/Peach.png";
 import Snow from "../assets/images/Snow.png";
+import Dax from "../assets/images/Dax.png";
 
 export default function PetPictures() {
   const settings = {
@@ -38,6 +39,12 @@ export default function PetPictures() {
           <img src={Snow} alt="Snow" className="w-full h-auto rounded-lg" />
           <p className="absolute bottom-0 left-0  text-third p-2 opacity-75">
             Snow
+          </p>
+        </div>
+        <div className="relative">
+          <img src={Dax} alt="Dax" className="w-full h-auto rounded-lg" />
+          <p className="absolute bottom-0 left-0  text-third p-2 opacity-75">
+            Dax
           </p>
         </div>
       </Slider>
