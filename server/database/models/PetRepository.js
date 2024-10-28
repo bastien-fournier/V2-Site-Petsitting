@@ -27,6 +27,14 @@ class PetRepository extends AbstractRepository {
     // Return the array of items
     return rows;
   }
+
+  async readByUserId(userId) {
+    const [rows] = await this.database.query(
+      `SELECT * FROM ${this.table} WHERE user_id = ?`,
+      [userId]
+    );
+    return rows;
+  }
 }
 
 module.exports = PetRepository;
