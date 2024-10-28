@@ -1,11 +1,39 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useUserContext } from "./Context/UserContext";
 
 import Dog from "../assets/images/dog.png";
 import PetProfil from "./PetProfil";
 
+const ApiUrl = import.meta.env.VITE_API_URL;
+
 export default function Profil() {
   const { user } = useUserContext();
+  const [pets, setPets] = useState([]);
+
+  useEffect(() => {
+    async function fetchUserPets() {
+      try {
+        const response = await fetch(`${ApiUrl}/api/pets/profile/pets`, {
+          method: "GET",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        setPets(data);
+      } catch (error) {
+        console.error("Erreur :", error);
+      }
+    }
+    fetchUserPets();
+  }, []);
 
   return (
     <div className="flex justify-center items-center flex-col max-w-md mx-auto p-6 bg-secondary rounded-lg shadow-md mt-20 mb-20">
@@ -29,9 +57,21 @@ export default function Profil() {
           Ajouter un nouvel animal
         </Link>
       </div>
-      <div>
-        <PetProfil />
-      </div>
+
+      {pets.length === 0 ? (
+        <p>Tu n'as pas encore ajouté ton animal</p>
+      ) : (
+        pets.map((pet) => (
+          <div key={pet.id}>
+            <PetProfil
+              petName={pet.petName}
+              petAge={pet.petAge}
+              petBreed={pet.petBreed}
+              description={pet.description}
+            />
+          </div>
+        ))
+      )}
     </div>
   );
 }

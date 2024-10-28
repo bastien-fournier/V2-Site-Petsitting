@@ -1,32 +1,10 @@
-import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+
 import ProfilDog from "../assets/images/profilDog.png";
 
-const ApiUrl = import.meta.env.VITE_API_URL;
-
-export default function PetProfil() {
-  const [pet, setPet] = useState(null);
-
-  useEffect(() => {
-    async function fetchUserPets() {
-      try {
-        const response = await fetch(`${ApiUrl}/api/pets/profile/pets`, {
-          method: "GET",
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        const data = await response.json();
-        setPet(data[0]); // Affiche le premier animal
-      } catch (error) {
-        console.error("Erreur :", error);
-      }
-    }
-    fetchUserPets();
-  }, []);
-
+export default function PetProfil({ petName, petAge, petBreed, description }) {
   return (
-    <div className="max-w-sm mx-auto p-6 mt-10">
+    <div className="max-w-sm mx-auto p-6 mt-10 bg-white rounded-lg">
       <div className="flex items-center justify-center mb-4">
         <img
           src={ProfilDog}
@@ -34,23 +12,32 @@ export default function PetProfil() {
           className="w-24 h-24 rounded-full object-cover"
         />
       </div>
-      <h2 className="text-xl font-semibold text-white text-center mb-4">
-        {pet?.petName || "Nom de l'animal"}
+      <h2 className="text-xl text-secondary font-semibold  text-center mb-4">
+        {petName}
       </h2>
       <ul className="space-y-2">
-        <li className="text-sm text-white">
-          <span className="font-medium text-white">Âge :</span>{" "}
-          {pet?.petAge || "Non spécifié"} ans
+        <li className="text-sm text-secondary">
+          <span className="font-medium text-secondary">J'ai </span>
+          {petAge} ans
         </li>
-        <li className="text-sm text-white">
-          <span className="font-medium text-white">Race :</span>{" "}
-          {pet?.petBreed || "Non spécifié"}
+        <li className="text-sm text-secondary">
+          <span className="font-medium text-secondary">Je suis un(e) </span>
+          {petBreed}
         </li>
-        <li className="text-sm text-white">
-          <span className="font-medium text-white">Description :</span>{" "}
-          {pet?.description || "Aucune description"}
+        <li className="text-sm text-secondary">
+          <span className="font-medium text-secondary">
+            Comment mon mon propriétaire me décrit : <span> </span>
+          </span>
+          {description}
         </li>
       </ul>
     </div>
   );
 }
+
+PetProfil.propTypes = {
+  petName: PropTypes.string.isRequired,
+  petAge: PropTypes.string.isRequired, // Modifie en fonction du type attendu
+  petBreed: PropTypes.string.isRequired, // Modifie en fonction du type attendu
+  description: PropTypes.string.isRequired, // Modifie en fonction du type attendu
+};
