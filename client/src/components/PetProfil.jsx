@@ -37,7 +37,7 @@ export default function PetProfil({ petName, petAge, petBreed, description }) {
 
 PetProfil.propTypes = {
   petName: PropTypes.string.isRequired,
-  petAge: PropTypes.string.isRequired, // Modifie en fonction du type attendu
+  petAge: PropTypes.number.isRequired, // Modifie en fonction du type attendu
   petBreed: PropTypes.string.isRequired, // Modifie en fonction du type attendu
   description: PropTypes.string.isRequired, // Modifie en fonction du type attendu
 };
