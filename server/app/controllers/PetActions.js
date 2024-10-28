@@ -15,16 +15,23 @@ const add = async (req, res, next) => {
   }
 };
 
-const browse = async (req, res, next) => {
+const browse = async (req, res) => {
   try {
-    // Fetch all offers from the database
-    const pets = await tables.pet.readAll();
+    const userId = req.user; // Récupère l'ID de l'utilisateur connecté
+    const pets = await tables.pet.readByUserId(userId); // Récupère les animaux
 
-    // Respond with the offers in JSON format
-    res.json(pets);
-  } catch (err) {
-    // Pass any errors to the error-handling middleware
-    next(err);
+    if (pets.length === 0) {
+      return res
+        .status(404)
+        .json({ error: "Aucun animal trouvé pour cet utilisateur." });
+    }
+
+    // Renvoie la liste des animaux
+    return res.json(pets); // Ici, on renvoie les animaux
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ error: "Erreur lors de la récupération des animaux" });
   }
 };
 
