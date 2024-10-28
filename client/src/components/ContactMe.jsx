@@ -29,7 +29,7 @@ export default function ContactMe() {
     <div className="max-w-md mx-auto p-6 bg-secondary rounded-lg shadow-md mt-10 mb-20">
       {isSent ? (
         <p className="text-green-600 font-semibold text-center">
-          Merci pour votre demande ! Nous reviendrons vers vous bientôt.
+          Merci pour votre demande ! Je reviendrais très vite.
         </p>
       ) : (
         <form onSubmit={sendReservationRequest}>

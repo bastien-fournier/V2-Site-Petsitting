@@ -51,7 +51,7 @@ export default function LogIn() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-secondary rounded-lg shadow-md mt-10 mb-20">
+    <div className="max-w-md mx-auto p-6 bg-secondary rounded-lg shadow-md mt-20 mb-20">
       <h1 className="text-2xl font-bold text-center text-white">Connexion</h1>
       <form method="POST" onSubmit={handleSubmit}>
         <div className="mt-4">
