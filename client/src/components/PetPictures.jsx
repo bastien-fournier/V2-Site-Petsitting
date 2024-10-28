@@ -18,10 +18,11 @@ export default function PetPictures() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10">
-      <h2 className="text-2xl font-bold text-center mb-4">Galerie de Photos</h2>
+    <div className="max-w-xs mx-auto mt-20">
+      <h2 className="text-2xl font-bold text-center mb-10">
+        Ils m'ont fait confiance
+      </h2>
       <Slider
-        dots={settings.dots}
         infinite={settings.infinite}
         speed={settings.speed}
         slidesToShow={settings.slidesToShow}
@@ -29,23 +30,17 @@ export default function PetPictures() {
         autoplaySpeed={settings.autoplaySpeed}
         fade={settings.fade}
       >
-        <div className="relative">
+        <div className="text-center">
           <img src={Peach} alt="Peach" className="w-full h-auto rounded-lg" />
-          <p className="absolute bottom-0 left-0  text-third p-2 opacity-75">
-            Peach
-          </p>
+          <p className=" mt-2">Peach</p>
         </div>
-        <div className="relative">
+        <div className="text-center">
           <img src={Snow} alt="Snow" className="w-full h-auto rounded-lg" />
-          <p className="absolute bottom-0 left-0  text-third p-2 opacity-75">
-            Snow
-          </p>
+          <p className=" mt-2">Snow</p>
         </div>
-        <div className="relative">
+        <div className="text-center">
           <img src={Dax} alt="Dax" className="w-full h-auto rounded-lg" />
-          <p className="absolute bottom-0 left-0  text-third p-2 opacity-75">
-            Dax
-          </p>
+          <p className=" mt-2">Dax</p>
         </div>
       </Slider>
     </div>

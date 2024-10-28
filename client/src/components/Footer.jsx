@@ -5,9 +5,7 @@ export default function Footer() {
         NaosGuard
       </p>
       <div>
-        <p className="font-bold text-white">
-          Made with ❤️ © 2024 Bastien Fournier
-        </p>
+        <p className="font-bold text-white">Made with ❤️ By Bastien Fournier</p>
       </div>
     </footer>
   );

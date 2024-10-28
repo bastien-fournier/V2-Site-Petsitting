@@ -6,7 +6,7 @@ import PetPictures from "../components/PetPictures";
 export default function HomePage() {
   return (
     <div>
-      <div className="bg-secondary flex flex-col lg:flex-row justify-center items-center text-center lg:text-left mt-20 lg:mt-20 p-5 lg:p-10 rounded-lg shadow-2xl">
+      <div className="bg-secondary max-w-6xl mx-auto flex flex-col lg:flex-row justify-center items-center text-center lg:text-left mt-20 p-5 lg:p-10 rounded-lg shadow-2xl">
         <div className="lg:w-1/2 lg:flex lg:justify-end lg:-ml-10">
           <HomePicture />
         </div>
