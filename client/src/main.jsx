@@ -11,6 +11,8 @@ import ProfilPage from "./pages/ProfilPage";
 import AnimalPage from "./pages/AnimalPage";
 import AboutServices from "./pages/AboutServices";
 import BookingPage from "./pages/BookingPage";
+import AdminPage from "./pages/AdminPage";
+import AdminLoader from "./Loader/AdminLoader";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +52,12 @@ const router = createBrowserRouter([
         path: "/booking-page",
         id: "bookingPage",
         element: <BookingPage />,
+      },
+      {
+        path: "/admin-page",
+        id: "adminPage",
+        element: <AdminPage />,
+        loader: AdminLoader,
       },
     ],
   },

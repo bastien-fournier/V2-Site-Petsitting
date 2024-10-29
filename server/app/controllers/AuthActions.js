@@ -19,11 +19,21 @@ const login = async (req, res, next) => {
     if (verified === true) {
       // Respond with the user and a signed token in JSON format (but without the hashed password)
       delete user.password;
-
-      const token = await jwt.sign({ sub: user.id }, process.env.APP_SECRET, {
-        expiresIn: "1h",
-      });
-
+      let token = "";
+      if (user.admin === 0) {
+        token = await jwt.sign({ sub: user.id }, process.env.APP_SECRET, {
+          expiresIn: "1h",
+        });
+      }
+      if (user.admin === 1) {
+        token = await jwt.sign(
+          { sub: user.id, admin: true },
+          process.env.APP_SECRET,
+          {
+            expiresIn: "1h",
+          }
+        );
+      }
       delete user.id;
 
       res

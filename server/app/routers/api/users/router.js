@@ -9,9 +9,10 @@ const router = express.Router();
 // Import item-related actions
 const { add, browse } = require("../../../controllers/UserActions");
 const { login, logout } = require("../../../controllers/AuthActions");
-const { hashPassword } = require("../../../services/auth");
+const { hashPassword, adminCookie } = require("../../../services/auth");
 
 router.get("/", browse);
+router.get("/admin", adminCookie);
 router.post("/login", login);
 router.get("/logout", logout);
 router.post("/registers", hashPassword, add);
