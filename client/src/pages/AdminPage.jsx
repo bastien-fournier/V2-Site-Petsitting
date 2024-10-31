@@ -1,3 +1,10 @@
+import FormAvailability from "../components/Admin/FormAvailability";
+
 export default function AdminPage() {
-  return <h1>Coucou l'admin</h1>;
+  return (
+    <div>
+      <h1>Coucou l'admin</h1>
+      <FormAvailability />
+    </div>
+  );
 }

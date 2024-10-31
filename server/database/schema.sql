@@ -16,3 +16,12 @@ create table pet (
   user_id int unsigned not null,
   foreign key (user_id) references `user`(id) on delete cascade
 );
+
+CREATE TABLE availability (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  start_date DATE NOT NULL,
+  end_date DATE NOT NULL,
+  status VARCHAR(20) NOT NULL DEFAULT 'disponible',
+  user_id INT UNSIGNED NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES `user`(id) ON DELETE CASCADE
+);
