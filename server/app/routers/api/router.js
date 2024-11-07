@@ -14,6 +14,10 @@ const petsRouter = require("./pets/router");
 
 router.use("/pets", petsRouter);
 
+const availabilityRouter = require("./availability/router");
+
+router.use("/availability", availabilityRouter);
+
 /* ************************************************************************* */
 
 module.exports = router;

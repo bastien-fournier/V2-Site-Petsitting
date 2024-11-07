@@ -1,6 +1,7 @@
 // Import the repository modules responsible for handling data operations on the tables
 const UserRepository = require("./models/UserRepository");
 const PetRepository = require("./models/PetRepository");
+const AvailabilityRepository = require("./models/AvailabilityRepository");
 
 // Create an empty object to hold data repositories for different tables
 const tables = {};
@@ -13,6 +14,7 @@ const tables = {};
 
 tables.user = new UserRepository();
 tables.pet = new PetRepository();
+tables.availability = new AvailabilityRepository();
 
 /* ************************************************************************* */
 
