@@ -18,6 +18,20 @@ const add = async (req, res, next) => {
   }
 };
 
+const browse = async (req, res, next) => {
+  try {
+    // Fetch all offers from the database
+    const availabilities = await tables.availability.readAll();
+
+    // Respond with the offers in JSON format
+    res.json(availabilities);
+  } catch (err) {
+    // Pass any errors to the error-handling middleware
+    next(err);
+  }
+};
+
 module.exports = {
   add,
+  browse,
 };
