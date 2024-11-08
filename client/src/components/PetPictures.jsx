@@ -18,8 +18,8 @@ export default function PetPictures() {
   };
 
   return (
-    <div className="max-w-xs mx-auto mt-20">
-      <h2 className="text-2xl font-bold text-center mb-10">
+    <div className="max-w-xs mx-auto ">
+      <h2 className=" text-3xl font-playfair font-bold text-center  mb-10">
         Ils m'ont fait confiance
       </h2>
       <Slider

@@ -66,16 +66,13 @@ export default function AnimalForm() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-secondary rounded-lg shadow-md mt-20 mb-20">
-      <h1 className="text-2xl font-bold text-center text-white">
+    <div className="w-full max-w-md mx-auto p-6 mt-10 mb-16">
+      <h1 className="text-3xl font-bold text-center  mb-6">
         Informations sur mon animal
       </h1>
       <form method="POST" onSubmit={handleSubmit}>
-        <div className="mt-4">
-          <label
-            htmlFor="petName"
-            className="block text-sm font-medium text-white"
-          >
+        <div className="mb-6">
+          <label htmlFor="petName" className="block  font-medium ">
             Prénom de l'animal
           </label>
           <input
@@ -85,15 +82,12 @@ export default function AnimalForm() {
             onChange={handleChange}
             value={pet.petName}
             required
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
-        <div className="mt-4">
-          <label
-            htmlFor="petAge"
-            className="block text-sm font-medium text-white"
-          >
+        <div className="mb-6">
+          <label htmlFor="petAge" className="block  font-medium ">
             Âge de l'animal
           </label>
           <input
@@ -104,15 +98,12 @@ export default function AnimalForm() {
             value={pet.petAge}
             required
             min="0"
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
-        <div className="mt-4">
-          <label
-            htmlFor="petBreed"
-            className="block text-sm font-medium text-white"
-          >
+        <div className="mb-6">
+          <label htmlFor="petBreed" className="block  font-medium ">
             Espèce
           </label>
           <input
@@ -122,32 +113,29 @@ export default function AnimalForm() {
             onChange={handleChange}
             value={pet.petBreed}
             required
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
-        <div className="mt-4">
-          <label
-            htmlFor="description"
-            className="block text-sm font-medium text-white"
-          >
+        <div className="mb-6">
+          <label htmlFor="description" className="block  font-medium ">
             Description
           </label>
           <textarea
             id="description"
             name="description"
-            rows="3"
+            rows="4"
             onChange={handleChange}
             value={pet.description}
             required
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
         <div className="mt-6">
           <button
             type="submit"
-            className="w-full bg-forth text-secondary font-bold py-2 rounded-md"
+            className="w-full bg-secondary text-white font-bold py-3 rounded-lg hover:bg-forth-dark focus:outline-none focus:ring-2 focus:ring-forth-dark transition duration-300"
           >
             Enregistrer les informations
           </button>

@@ -39,22 +39,19 @@ export default function ContactMe() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-secondary rounded-lg shadow-md mt-10 mb-20">
+    <div className="max-w-md m-14 mt-10 mb-20">
       {isSent ? (
         <p className="text-green-600 font-semibold text-center">
           Merci pour votre demande ! Je reviendrais très vite vers vous.
         </p>
       ) : (
         <form onSubmit={sendReservationRequest}>
-          <h2 className="text-2xl font-bold text-center text-white">
+          <h2 className="text-3xl font-bold font-playfair text-center ">
             Demande de Réservation
           </h2>
 
           <div className="mt-4">
-            <label
-              htmlFor="user_name"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="user_name" className="block text-sm font-medium ">
               Votre Nom
             </label>
             <input
@@ -67,10 +64,7 @@ export default function ContactMe() {
           </div>
 
           <div className="mt-4">
-            <label
-              htmlFor="user_email"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="user_email" className="block text-sm font-medium ">
               Votre Email
             </label>
             <input
@@ -83,10 +77,7 @@ export default function ContactMe() {
           </div>
 
           <div className="mt-4">
-            <label
-              htmlFor="start_date"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="start_date" className="block text-sm font-medium ">
               Date de début
             </label>
             <input
@@ -100,10 +91,7 @@ export default function ContactMe() {
           </div>
 
           <div className="mt-4">
-            <label
-              htmlFor="end_date"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="end_date" className="block text-sm font-medium ">
               Date de fin
             </label>
             <input
@@ -117,10 +105,7 @@ export default function ContactMe() {
           </div>
 
           <div className="mt-4">
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="message" className="block text-sm font-medium ">
               Détails de la demande
             </label>
             <textarea
@@ -134,7 +119,7 @@ export default function ContactMe() {
           <div className="mt-6">
             <button
               type="submit"
-              className="w-full bg-forth text-secondary font-bold py-2 rounded-md"
+              className="w-full bg-secondary text-white  font-bold py-2 rounded-md"
             >
               Envoyer la Demande
             </button>

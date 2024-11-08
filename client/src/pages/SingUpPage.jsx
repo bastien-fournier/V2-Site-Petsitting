@@ -1,5 +1,9 @@
 import SignUpForm from "../components/SignUpForm";
 
-export default function HomePage() {
-  return <SignUpForm />;
+export default function SignUpPage() {
+  return (
+    <div className="flex justify-center ">
+      <SignUpForm />
+    </div>
+  );
 }

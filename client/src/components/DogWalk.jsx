@@ -3,7 +3,7 @@ import DogWalking from "../assets/images/dogWalk.jpg";
 
 export default function DogWalk() {
   return (
-    <div className="flex flex-col md:flex-row items-stretch bg-secondary shadow-lg rounded-lg overflow-hidden">
+    <div className="flex flex-col md:flex-row items-stretch bg-third shadow-lg rounded-lg overflow-hidden">
       <img
         src={DogWalking}
         alt="Cat sitting on Sofa"
@@ -29,7 +29,7 @@ export default function DogWalk() {
         <Link to="/booking-page">
           <button
             type="button"
-            className="mt-3 bg-forth text-secondary px-4 py-2 rounded"
+            className="mt-3 bg-secondary text-white px-4 py-2 rounded"
           >
             Réserver
           </button>

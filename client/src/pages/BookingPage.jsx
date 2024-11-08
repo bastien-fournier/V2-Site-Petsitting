@@ -7,7 +7,7 @@ export default function BookingPage() {
       <div className="flex justify-center">
         <Booking />
       </div>
-      <div>
+      <div className="flex justify-center">
         <ContactMe />
       </div>
     </>
