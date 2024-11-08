@@ -4,8 +4,8 @@ export default {
     extend: {
       colors: {
         background: "#e5eae1", // Définir une couleur primaire personnalisée
-        secondary: "#003925",
-        third: "#f28ad4",
+        secondary: "#0f363d",
+        third: "#D49F97",
         forth: "#fcf580",
       },
       fontFamily: {

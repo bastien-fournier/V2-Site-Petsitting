@@ -3,7 +3,7 @@ import DogSofa from "../assets/images/dogSofa.jpg";
 
 export default function DogSitting() {
   return (
-    <div className="flex flex-col md:flex-row items-center bg-secondary shadow-lg rounded-lg overflow-hidden">
+    <div className="flex flex-col md:flex-row items-center bg-third shadow-lg rounded-lg overflow-hidden">
       <img
         src={DogSofa}
         alt="Dog on Sofa"
@@ -24,7 +24,7 @@ export default function DogSitting() {
         <Link to="/booking-page">
           <button
             type="button"
-            className="mt-3 bg-forth text-secondary px-4 py-2 rounded"
+            className="mt-3 bg-secondary text-white px-4 py-2 rounded"
           >
             Réserver
           </button>

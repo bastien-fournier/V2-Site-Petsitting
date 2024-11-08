@@ -36,33 +36,31 @@ export default function Profil() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center flex-col max-w-md mx-auto p-6 bg-secondary rounded-lg shadow-md mt-20 mb-20">
-      <div className="mb-6 flex justify-center flex-col items-center">
-        <img
-          src={Dog}
-          alt="Profil"
-          className="w-80 h-52 md:w-80 md:h-52 lg:w-80 lg:h-52  mx-auto mb-4 object-cover"
-        />
-        <h2 className="text-2xl font-bold text-white">
+    <div className="flex justify-center items-center flex-col max-w-md mx-auto p-6   mt-16 mb-20">
+      <div className="mb-8 flex justify-center flex-col items-center">
+        <img src={Dog} alt="Profil" className="w-80 h-52 object-cover   mb-4" />
+        <h2 className="text-3xl font-bold  text-center">
           Bienvenue, {user.firstname} !
         </h2>
-        <p className="text-white">Heureux de vous revoir !</p>
+        <p className=" text-center text-lg">Heureux de vous revoir !</p>
       </div>
 
-      <div className="mb-6">
+      <div className="mb-8">
         <Link
           to="/animal-page"
-          className="bg-forth text-secondary px-4 py-2 rounded hover:bg-forth-dark transition duration-300"
+          className="bg-secondary text-white px-6 py-3 rounded-lg hover:bg-forth-dark focus:outline-none focus:ring-2 focus:ring-forth-dark transition duration-300"
         >
           Ajouter un nouvel animal
         </Link>
       </div>
 
       {pets.length === 0 ? (
-        <p>Tu n'as pas encore ajouté ton animal</p>
+        <p className="text-center  text-lg">
+          Tu n'as pas encore ajouté ton animal
+        </p>
       ) : (
         pets.map((pet) => (
-          <div key={pet.id}>
+          <div key={pet.id} className="mb-6">
             <PetProfil
               petName={pet.petName}
               petAge={pet.petAge}

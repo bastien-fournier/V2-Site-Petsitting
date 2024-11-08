@@ -51,14 +51,13 @@ export default function LogIn() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-secondary rounded-lg shadow-md mt-20 mb-20">
-      <h1 className="text-2xl font-bold text-center text-white">Connexion</h1>
+    <div className="max-w-md w-full m-14 mt-10 mb-20">
+      <h1 className="text-3xl font-bold font-playfair text-center ">
+        Connexion
+      </h1>
       <form method="POST" onSubmit={handleSubmit}>
         <div className="mt-4">
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-white"
-          >
+          <label htmlFor="email" className="block text-sm font-medium ">
             Adresse mail
           </label>
           <input
@@ -73,21 +72,12 @@ export default function LogIn() {
             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500"
           />
           {errors.email && (
-            <p
-              className="text-red-500 text-sm"
-              role="alert"
-              aria-live="assertive"
-            >
-              {errors.email}
-            </p>
+            <p className="text-red-500 text-sm">{errors.email}</p>
           )}
         </div>
 
         <div className="mt-4">
-          <label
-            htmlFor="password"
-            className="block text-sm font-medium text-white"
-          >
+          <label htmlFor="password" className="block text-sm font-medium ">
             Mot de passe
           </label>
           <input
@@ -105,13 +95,17 @@ export default function LogIn() {
 
         <div className="mt-6">
           {errors.general && (
-            <div role="alert" aria-live="assertive" className="text-red-500">
+            <div
+              className="text-red-500 text-sm"
+              role="alert"
+              aria-live="assertive"
+            >
               {errors.general}
             </div>
           )}
           <button
             type="submit"
-            className="w-full bg-forth text-secondary font-bold py-2 rounded-md"
+            className="w-full bg-secondary text-white font-bold py-2 rounded-md"
           >
             Se connecter
           </button>

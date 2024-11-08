@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 export default function Services() {
   return (
-    <section className="pt-16 pb-10">
-      <h2 className="text-3xl font-playfair font-bold text-center">
-        <span className="text-third">Mes</span> Services
+    <section className=" p-10">
+      <h2 className="text-3xl font-playfair  font-bold text-center">
+        Mes Services
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
-        <div className=" bg-secondary p-5 shadow-lg rounded-lg text-white">
+        <div className=" p-5   rounded-lg bg-white">
           {/* <img
             src="path/to/dog-sitting.jpg"
             alt="Garde de chiens"
@@ -19,13 +19,13 @@ export default function Services() {
           <Link to="/about-services">
             <button
               type="button"
-              className="mt-3 bg-forth text-secondary px-4 py-2 rounded"
+              className="bg-secondary text-white px-4 py-2 rounded mt-5 transition-transform duration-300 hover:scale-105"
             >
               En savoir plus
             </button>
           </Link>
         </div>
-        <div className=" bg-secondary text-white p-5 shadow-lg rounded-lg">
+        <div className="bg-white rounded-lg p-5">
           {/* <img
             src="path/to/cat-sitting.jpg"
             alt="Garde de chats"
@@ -39,13 +39,13 @@ export default function Services() {
           <Link to="/about-services">
             <button
               type="button"
-              className="mt-3 bg-forth text-secondary px-4 py-2 rounded"
+              className="bg-secondary text-white px-4 py-2 rounded mt-5 transition-transform duration-300 hover:scale-105"
             >
               En savoir plus
             </button>
           </Link>
         </div>
-        <div className=" bg-secondary text-white p-5 shadow-lg rounded-lg">
+        <div className="p-5 bg-white rounded-lg">
           {/* <img
             src="path/to/cat-sitting.jpg"
             alt="Garde de chats"
@@ -61,7 +61,7 @@ export default function Services() {
           <Link to="/about-services">
             <button
               type="button"
-              className="mt-3 bg-forth text-secondary px-4 py-2 rounded"
+              className="bg-secondary text-white px-4 py-2 rounded mt-5 transition-transform duration-300 hover:scale-105"
             >
               En savoir plus
             </button>
