@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Services() {
   return (
-    <section className="pt-16 pb-10 p-10">
+    <section className=" p-10">
       <h2 className="text-3xl font-playfair  font-bold text-center">
         Mes Services
       </h2>
@@ -19,7 +19,7 @@ export default function Services() {
           <Link to="/about-services">
             <button
               type="button"
-              className="mt-3 bg-secondary text-white px-4 py-2 rounded"
+              className="bg-secondary text-white px-4 py-2 rounded mt-5 transition-transform duration-300 hover:scale-105"
             >
               En savoir plus
             </button>
@@ -39,7 +39,7 @@ export default function Services() {
           <Link to="/about-services">
             <button
               type="button"
-              className="mt-3 bg-secondary text-white px-4 py-2 rounded"
+              className="bg-secondary text-white px-4 py-2 rounded mt-5 transition-transform duration-300 hover:scale-105"
             >
               En savoir plus
             </button>
@@ -61,7 +61,7 @@ export default function Services() {
           <Link to="/about-services">
             <button
               type="button"
-              className="mt-3 bg-secondary text-white px-4 py-2 rounded"
+              className="bg-secondary text-white px-4 py-2 rounded mt-5 transition-transform duration-300 hover:scale-105"
             >
               En savoir plus
             </button>

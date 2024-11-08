@@ -14,11 +14,12 @@ export default function HomePage() {
           <Welcome />
         </div>
       </div>
-      <div className=" max-w-6xl ">
-        <PetPictures />
-      </div>
-      <div className="w-full max-w-6xl mt-10">
+
+      <div className="w-full max-w-6xl mb-10 ">
         <Services />
+      </div>
+      <div className=" max-w-6xl mb-16 mt-10 ">
+        <PetPictures />
       </div>
     </div>
   );
