@@ -31,15 +31,15 @@ export default function HomePage() {
           <div className="hidden md:flex space-x-8">
             {user ? (
               <>
-                <Link
-                  to="/profil-page"
-                  className="text-gray-600 hover:text-gray-800"
-                >
+                <Link to="/about" className="hover:text-gray-800">
+                  A propos
+                </Link>
+                <Link to="/profil-page" className=" hover:text-gray-800">
                   {user.firstname}
                 </Link>
                 <button
                   type="button"
-                  className="text-gray-600 hover:text-gray-800 cursor-pointer"
+                  className=" hover:text-gray-800 cursor-pointer"
                   onClick={handleLogout}
                 >
                   Se déconnecter
@@ -47,6 +47,9 @@ export default function HomePage() {
               </>
             ) : (
               <>
+                <Link to="/about" className="hover:text-gray-800">
+                  A propos
+                </Link>
                 <Link to="/sign-up-page" className="hover:text-gray-800">
                   S'inscrire
                 </Link>
@@ -86,16 +89,19 @@ export default function HomePage() {
 
         {isOpen && (
           <div className="md:hidden">
-            <ul className="flex flex-col space-y-4 py-4 text-gray-600">
+            <ul className="flex flex-col space-y-4 py-4 ">
               {user ? (
                 <>
+                  <Link to="/about" className="hover:text-gray-800">
+                    A propos
+                  </Link>
                   <li className="hover:text-gray-800 cursor-pointer">
                     <Link to="/profil-page">{user.firstname}</Link>
                   </li>
                   <li>
                     <button
                       type="button"
-                      className="text-gray-600 hover:text-gray-800 cursor-pointer"
+                      className=" hover:text-gray-800 cursor-pointer"
                       onClick={handleLogout}
                     >
                       Se déconnecter
@@ -104,6 +110,9 @@ export default function HomePage() {
                 </>
               ) : (
                 <>
+                  <Link to="/about" className="hover:text-gray-800">
+                    A propos
+                  </Link>
                   <li className="hover:text-gray-800 cursor-pointer">
                     <Link to="/sign-up-page">S'inscrire</Link>
                   </li>

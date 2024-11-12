@@ -13,6 +13,7 @@ import AboutServices from "./pages/AboutServices";
 import BookingPage from "./pages/BookingPage";
 import AdminPage from "./pages/AdminPage";
 import AdminLoader from "./Loader/AdminLoader";
+import About from "./pages/About";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,11 @@ const router = createBrowserRouter([
         id: "adminPage",
         element: <AdminPage />,
         loader: AdminLoader,
+      },
+      {
+        path: "/about",
+        id: "about",
+        element: <About />,
       },
     ],
   },

@@ -6,7 +6,7 @@ import PetPictures from "../components/PetPictures";
 export default function HomePage() {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className=" max-w-6xl  flex flex-col lg:flex-row justify-center items-center text-center lg:text-left mt-10 m-10 p-5 lg:p-10 lg:gap-24">
+      <div className=" max-w-6xl  flex flex-col lg:flex-row justify-center items-center text-center lg:text-left mt-10 m-10  lg:p-10 lg:gap-24">
         <div className="lg:w-1/2 lg:flex lg:justify-end lg:-ml-10">
           <HomePicture />
         </div>
@@ -18,7 +18,7 @@ export default function HomePage() {
       <div className="w-full max-w-6xl mb-10 ">
         <Services />
       </div>
-      <div className=" max-w-6xl mb-16 mt-10 ">
+      <div className=" max-w-6xl mb-16  ">
         <PetPictures />
       </div>
     </div>

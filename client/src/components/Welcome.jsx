@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Welcome() {
   return (
-    <div className="mb-5 p-5 ">
+    <div>
       <h1 className="font-playfair font-bold text-5xl mt-5  ">
         Dogs and Cats lover
       </h1>

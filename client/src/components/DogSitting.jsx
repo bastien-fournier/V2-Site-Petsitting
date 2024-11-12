@@ -21,6 +21,11 @@ export default function DogSitting() {
           absence. Nous garantissons un environnement sécurisé et attentionné,
           idéal pour les chiens de toutes tailles.
         </p>
+        <p className="text-white">
+          Chaque journée d'hébergement est à 22€. Ce tarif comprend
+          l’hébergement, les repas, les promenades et les moments de jeu, afin
+          que votre animal se sente comme chez lui pendant votre absence.
+        </p>
         <Link to="/booking-page">
           <button
             type="button"
