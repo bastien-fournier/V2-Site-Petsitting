@@ -1,13 +1,11 @@
 .available-date {
-  background-color: #a3e635; /* Vert clair */
-  color: #064e3b; /* Vert foncé pour le texte */
-  border-radius: 50%;
+  background-color: #a3e635;
+  color: #064e3b;
   font-weight: bold;
 }
 
 .unavailable-date {
-  background-color: #f87171; /* Rouge clair */
-  color: #7f1d1d; /* Rouge foncé pour le texte */
-  border-radius: 50%;
+  background-color: #f87171;
+  color: #7f1d1d;
   font-weight: bold;
 }
