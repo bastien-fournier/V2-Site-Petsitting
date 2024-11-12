@@ -2,13 +2,17 @@ const express = require("express");
 
 const router = express.Router();
 
-const { add, browse } = require("../../../controllers/AvailabilityActions");
+const {
+  add,
+  browse,
+  update,
+  destroy,
+} = require("../../../controllers/AvailabilityActions");
 const { userIdCookie } = require("../../../services/auth");
 
 router.post("/availabilityAdmin", userIdCookie, add);
 router.get("/readAvailability", browse);
-
-// router.delete("/delete-user", verifyCookie, destroyUser);
-/* ************************************************************************* */
+router.put("/availabilityAdmin/:id", userIdCookie, update);
+router.delete("/availabilityAdmin/:id", userIdCookie, destroy);
 
 module.exports = router;
