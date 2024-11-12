@@ -3,16 +3,11 @@ const tables = require("../../database/tables");
 const add = async (req, res, next) => {
   try {
     const availability = req.body;
-    console.info(availability);
-
-    // Créer un nouvel utilisateur
     const insertUserId = await tables.availability.create(
       availability,
       req.user
     );
-    // const insertCandiateId = await tables.candidate.create(user, insertUserId);
-
-    res.status(201).json(insertUserId); // Répondre avec l'utilisateur créé
+    res.status(201).json(insertUserId);
   } catch (err) {
     next(err);
   }
@@ -20,13 +15,42 @@ const add = async (req, res, next) => {
 
 const browse = async (req, res, next) => {
   try {
-    // Fetch all offers from the database
     const availabilities = await tables.availability.readAll();
-
-    // Respond with the offers in JSON format
     res.json(availabilities);
   } catch (err) {
-    // Pass any errors to the error-handling middleware
+    next(err);
+  }
+};
+
+const update = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const availability = req.body;
+    const updated = await tables.availability.update(id, availability);
+
+    if (updated) {
+      res
+        .status(200)
+        .json({ message: "Disponibilité mise à jour avec succès" });
+    } else {
+      res.status(404).json({ message: "Disponibilité non trouvée" });
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
+const destroy = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const deleted = await tables.availability.delete(id);
+
+    if (deleted) {
+      res.status(200).json({ message: "Disponibilité supprimée avec succès" });
+    } else {
+      res.status(404).json({ message: "Disponibilité non trouvée" });
+    }
+  } catch (err) {
     next(err);
   }
 };
@@ -34,4 +58,6 @@ const browse = async (req, res, next) => {
 module.exports = {
   add,
   browse,
+  update,
+  destroy,
 };

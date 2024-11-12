@@ -25,7 +25,7 @@ export default function PetPictures() {
       <h2 className="text-3xl font-playfair font-bold text-center mb-10">
         Ils m'ont fait confiance
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
         {visibleDogs.map((dog) => (
           <div
             key={dog.id}
@@ -42,7 +42,7 @@ export default function PetPictures() {
           </div>
         ))}
       </div>
-      {/* Bouton "Voir plus" ou "Voir moins" */}
+
       <div className="flex justify-center mt-6">
         {!showAll && dogs.length > 4 && (
           <button
