@@ -18,7 +18,7 @@ export default function Welcome() {
           type="button"
           className="bg-secondary text-white px-4 py-2 rounded mt-5 transition-transform duration-300 hover:scale-105"
         >
-          Me faire une demande
+          Faire une réservation
         </button>
       </Link>
     </div>
