@@ -11,7 +11,7 @@ export default function SignUpForm() {
     email: "",
     password: "",
     confirmPassword: "",
-    birthday: "", // Ajout du champ birthday
+    birthday: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -46,9 +46,8 @@ export default function SignUpForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Appeler la fonction de validation
     if (!validateFormUser()) {
-      return; // Arrêter la soumission si le formulaire n'est pas valide
+      return;
     }
 
     try {
@@ -66,14 +65,14 @@ export default function SignUpForm() {
 
       const data = await response.json();
       console.info("Success:", data);
-      navigate("/log-in-page"); // Redirection après succès
+      navigate("/log-in-page");
     } catch (err) {
       console.error("Fetch error:", err);
     }
   };
 
   return (
-    <div className="max-w-md w-ful m-14 mt-10 mb-20">
+    <div className="max-w-md w-full m-14 mt-10 mb-20">
       <h1 className="text-3xl font-bold font-playfair text-center">
         Inscription
       </h1>
